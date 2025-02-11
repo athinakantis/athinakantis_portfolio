@@ -14,7 +14,7 @@ export const ProjectList = () => {
           <ul>
             <li>
               <Link to='/'>
-                  <House color='#c165a3'/>
+                  <House />
               </Link>
             </li>
           </ul>

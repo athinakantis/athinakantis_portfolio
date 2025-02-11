@@ -50,7 +50,7 @@ export const Project = () => {
           <ul>
             <li>
               <Link to='/'>
-                <House color='#c165a3'/>
+                <House />
               </Link>
             </li>
           </ul>
@@ -60,12 +60,12 @@ export const Project = () => {
         <div id='project-container'>
           <div className="options">
             <Link to='/projects'>
-              <ChevronLeft color='#c165a3'/>
+              <ChevronLeft />
               Back to Projects
             </Link>
             <button onClick={handleNavigateNext}>
               Next Project
-              <ChevronRight color='#c165a3'/>
+              <ChevronRight />
             </button>        
           </div>
           {preview.type === 'img' ? (
@@ -101,10 +101,10 @@ export const Project = () => {
             </ul>
             <div className='links'>
               <Link target='_blank' to={livePage!}>
-              <ExternalLink color='#c165a3'/>
+              <ExternalLink />
                 Live Page</Link>
               <Link target='_blank' to={sourceCode!}>
-                <CodeXml color='#c165a3'/>
+                <CodeXml />
                 Source Code
               </Link>
             </div>
