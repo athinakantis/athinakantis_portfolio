@@ -2,7 +2,7 @@
   {
     "id": 0,
     "title": "PancakeCo",
-    "description": "Example store front and order page of a pancake café",
+    "description": "This Vanilla JavaScript pancake shop features custom illustrations, a dynamic cart system, and real-time pricing based on toppings and quantities. Built with responsive design, it ensures smooth functionality across all devices without external frameworks.",
     "tags": ["html", "css", "js", "adobe AI"],
     "preview": {
       "type": "img",
