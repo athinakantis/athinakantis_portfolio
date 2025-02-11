@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Recursive:wght@300..1000&display=swap');
+
+/* General Styling / Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --darkTheme01: #101010;
+  --darkTheme02: #151515;
+  --darkTheme03: #1a1a1a;
+  --darkTheme04: #1e1e1e;
+  --darkTheme05: #242424;
+  --darkTheme06: #3c3c3c;
+  --darkTheme07: #858585;
+  --darkTheme08: #dedede;
+
+  --lightTheme01: #ffffff;
+  --lightTheme02: #e9e7e4;
+  --lightTheme03: #c5ad98;
+  --lightTheme04: #ab8b70;
+  --lightTheme05: #66503e;
+  --lightTheme06: #3a3028;
+  --lightTheme07: #28211a;
+  --lightTheme08: #1b1612;
+
+  --accentDarkBlue: #0c1020;
+  --accentDarkOrange: #2d1304;
+  --accentDarkPurple: #2e011d;
+  --accentDarkPink: #6f0147;
+
+  --accentMidPurple: #c165a3;
+  --accentMidPink: #f80ea2;
+  --accentMidOrange: #ff6106;
+  --accentMidBrown: #652c0b;
+  --accentMidBlue: #111835;
+  --accentMidNavy: #2a3563;
+  --accentMidLime: #9cb935;
+
+  --accentLightPurple: #dcd8ec;
+  --accentLightLime: #ddf096;
+  --accentLightOrange: #ffbd96;
+  --accentLightYellow: #ffe3b0;
+
+  --accentStrongPurple: #ad99ff;
+  --accentStrongGreen: #adff99;
+}
+
+main {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--darkTheme03);
+  color: var(--primaryColor);
+}
+
+button,
+select,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+:is(h1, h2, h3, h4, h5, h6, li) {
+  font-family: 'Azeret Mono';
+  color: var(--accentLightPurple);
+}
+
+a {
+  font-weight: 700;
+  color: var(--accentMidPurple);
+  text-underline-offset: 5px;
+  font-family: 'Azeret Mono';
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: var(--accentMidPink);
+  }
+}
+
+main a {
+  &:has(> svg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+p {
+  color: var(--accentLightPurple);
+  font-family: 'Azeret Mono';
+}
+
+/* Embedded Figma Content */
+.embeddedFigma {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 800px;
+  height: 450px;
+}
+
+#projects-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Project List */
+main:has(#projects-container) {
+  min-height: 50vh;
+}
+
+header {
+  margin: 2rem 0 0;
+  text-align: center;
+
+  & #logo img {
+    width: 80px;
+  }
+}
+
+/* Project Card Styling */
+.project-card-container {
+  display: flex;
+  flex-direction: column;
+  color: var(--darkTheme08);
+  overflow: hidden;
+  max-height: 300px;
+  background-color: var(--darkTheme02);
+  max-width: min-content;
+  transition: filter 200ms ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(4px 2px 20px var(--accentDarkPink));
+  }
+
+  & img {
+    width: 310px;
+  }
+
+  & .card-details {
+    padding: 1rem 1rem 2rem;
+  }
+
+  & h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Landing Page Styling */
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & p {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  & ul {
+    display: flex;
+
+    & li:not(:last-of-type) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  & nav {
+    margin: 0 0 2rem;
+    & a {
+      display: flex;
+
+      & svg {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+}
+
+#logo {
+  margin: 0 0 1rem;
+
+  & img {
+    width: 300px;
+    /*Small size: 80px*/
+  }
+}
+
+/* Landing Page Socials */
+#socials {
+  display: flex;
+  align-items: center;
+
+  & p {
+    margin: 0 5px 0 0;
+    color: var(--accentMidPurple);
+  }
+
+  & ul {
+    display: flex;
+
+    & li:not(:last-of-type) {
+      margin: 0 5px 0 0;
+    }
+  }
+}
+
+/* Single Project Page */
+main:has(#project-container) {
+  justify-content: start;
+}
+#project-container {
+  padding: 2rem;
+
+  & .options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1rem;
+
+    & a {
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+  }
+}

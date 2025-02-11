@@ -1,0 +1,70 @@
+[
+  {
+    "id": 0,
+    "title": "PancakeCo",
+    "description": "Example store front and order page of a pancake café",
+    "tags": ["html", "css", "js", "adobe AI"],
+    "preview": {
+      "type": "img",
+      "src": "/pancakeCo_preview.png",
+      "alt": "Screenshot of Pancake Co web app"
+    },
+    "cardPreview": {
+      "src": "/pancakeCo_preview.png",
+      "alt": "",
+      "description": "Vanilla JS project of a pancake parlor store-front"
+    },
+    "features": ["Cart System", "Dynamic Pricing", "Responsive Design"],
+    "technologies": ["Vanilla JS"],
+    "screenshots": [],
+    "embeddedContent": {
+      "figma": "https://embed.figma.com/design/ytmJ9blLohUMTD7UlsRpTo/Pancake-Co-Style-Guide-%2B-Wireframe?node-id=0-1&embed-host=share"
+    },
+    "livePage": "https://athinakantis.github.io/pancakeCo/",
+    "sourceCode": "https://github.com/athinakantis/pancakeCo"
+  },
+  {
+    "id": 1,
+    "title": "Multi Step Form",
+    "description": "A Single Page Form Application powered by React",
+    "tags": ["React", "HTML", "CSS", "JS"],
+    "preview": {
+      "type": "img",
+      "src": "",
+      "alt": "Video demo of a Multi-Step Form"
+    },
+    "cardPreview": {
+      "src": "/msf_preview.png",
+      "alt": "",
+      "description": "React-powered Multi-Step-Form "
+    },
+    "features": ["Dynamic Pricing", "Responsive Design"],
+    "technologies": ["React"],
+    "screenshots": [],
+    "embeddedContent": null,
+    "livePage": "https://athinakantis.github.io/MultiStepForm/",
+    "sourceCode": "https://github.com/athinakantis/Front_End_Mentor/tree/main/multiStepForm"
+  },
+  {
+    "id": 2,
+    "title": "Birthday Countdown",
+    "description": "Countdown timer to my nieces birthday",
+    "tags": ["HTML", "CSS", "JS"],
+    "preview": {
+      "type": "mov",
+      "src": "/Launch_Countdown_Preview.mov",
+      "alt": "Video of digital fireworks"
+    },
+    "cardPreview": {
+      "src": "/countdown_preview.png",
+      "alt": "",
+      "description": "Vanilla JS countdown"
+    },
+    "features": ["Special effects", "Responsive Design", "Countdown"],
+    "technologies": ["React"],
+    "screenshots": [],
+    "embeddedContent": null,
+    "livePage": "https://athinakantis.github.io/Front_End_Mentor/Launch_Countdown/",
+    "sourceCode": "https://github.com/athinakantis/Front_End_Mentor/tree/main/Launch_Countdown"
+  }
+]
