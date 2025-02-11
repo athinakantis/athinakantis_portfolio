@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Palette, CircleUserRound, BriefcaseBusiness } from 'lucide-react';
 
 
 function LandingPage() {
@@ -10,7 +11,7 @@ function LandingPage() {
           <div id="logo">
             <img src="/logo_png.png" alt="" />
           </div>
-          <p>Hello :) I'm Athina, a Full-Stack Web Developer, Art Graduate and ex- Nurse Assistant.</p>
+          <p>Hello :) I'm Athina, a Full-Stack Web Developer, Art Graduate and ex-Nurse Assistant.</p>
 
           <nav>
             <ul>
@@ -19,13 +20,20 @@ function LandingPage() {
               </li>
               <li>
                 <Link to='/projects'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-briefcase-business"><path d="M12 12h.01" /><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /><path d="M22 13a18.15 18.15 0 0 1-20 0" /><rect width="20" height="14" x="2" y="6" rx="2" /></svg>
+                  <BriefcaseBusiness color='#c165a3'/>
                   Projects</Link>
               </li>
               <li>
-                <Link to='/'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0" /><circle cx="12" cy="10" r="4" /><circle cx="12" cy="12" r="10" /></svg>
-                  About</Link>
+                <Link to=''>
+                <CircleUserRound color='#c165a3'/>
+                About
+                </Link>
+              </li>
+              <li>
+                <Link to=''>
+                <Palette color='#c165a3'/>
+                Art
+                </Link>
               </li>
             </ul>
           </nav>
