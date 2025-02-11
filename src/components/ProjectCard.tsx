@@ -6,7 +6,6 @@ type ProjectCardProps = {
 };
 
 
-
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const { title, cardPreview } = project
   return (
@@ -15,7 +14,6 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <img src={cardPreview.src} alt={cardPreview.alt} />
         <div className="card-details">
           <h2>{cardPreview.description}</h2>
-
         </div>
       </Link>
     </div >

@@ -1,16 +1,19 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ProjectT } from '../types/types';
 import projects from '../utils/projects.json'
+import { ExternalLink, CodeXml, House, ChevronRight, ChevronLeft } from 'lucide-react';
 
 
 export const Project = () => {
   const { projectName } = useParams()
+  const navigate = useNavigate()
 
 
   if (!projectName) {
     throw new Error('missing projectname')
   }
 
+  // Format project name from parameters to find matching project from projects.json
   const formattedProject = projectName.replaceAll('-', ' ').toLowerCase()
   const project = projects.find(project => project.title.toLowerCase() === formattedProject)
 
@@ -30,6 +33,11 @@ export const Project = () => {
     sourceCode
   } = project as ProjectT;
 
+  const handleNavigateNext = () => {
+    const indexOfNext = projects.indexOf(project) === projects.length - 1 ? 0 : projects.indexOf(project) + 1
+    const nextProject = projects[indexOfNext].title
+    navigate(`/projects/${nextProject.replaceAll(' ', '-')}`)
+  }
 
   return (
     <>
@@ -41,7 +49,9 @@ export const Project = () => {
         <nav>
           <ul>
             <li>
-              <Link to='/'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></Link>
+              <Link to='/'>
+                <House color='#c165a3'/>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -50,22 +60,24 @@ export const Project = () => {
         <div id='project-container'>
           <div className="options">
             <Link to='/projects'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6" /></svg>
+              <ChevronLeft color='#c165a3'/>
               Back to Projects
             </Link>
-            <Link to=''>
+            <button onClick={handleNavigateNext}>
               Next Project
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6" /></svg>
-            </Link>
+              <ChevronRight color='#c165a3'/>
+            </button>        
           </div>
           {preview.type === 'img' ? (
             <img
+              id='preview'
               src={preview.src}
               alt={preview.alt
               }
             />
           ) : (
             <video
+              id='preview'
               autoPlay
               loop
               muted
@@ -89,9 +101,10 @@ export const Project = () => {
             </ul>
             <div className='links'>
               <Link target='_blank' to={livePage!}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg>Live Page</Link>
+              <ExternalLink color='#c165a3'/>
+                Live Page</Link>
               <Link target='_blank' to={sourceCode!}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code-xml"><path d="m18 16 4-4-4-4" /><path d="m6 8-4 4 4 4" /><path d="m14.5 4-5 16" /></svg>
+                <CodeXml color='#c165a3'/>
                 Source Code
               </Link>
             </div>
