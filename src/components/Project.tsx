@@ -2,7 +2,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ProjectT } from '../types/types';
 import projects from '../utils/projects.json'
 import { ExternalLink, CodeXml, House, ChevronRight, ChevronLeft } from 'lucide-react';
-
+import { Header } from './Header';
 
 export const Project = () => {
   const { projectName } = useParams()
@@ -41,21 +41,6 @@ export const Project = () => {
 
   return (
     <>
-
-      <header>
-        <div id="logo">
-          <img src="/logo_png.png" alt="" />
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>
-                <House />
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <main>
         <div id='project-container'>
           <div className="options">
@@ -66,7 +51,7 @@ export const Project = () => {
             <button onClick={handleNavigateNext}>
               Next Project
               <ChevronRight />
-            </button>        
+            </button>
           </div>
           {preview.type === 'img' ? (
             <img
@@ -101,7 +86,7 @@ export const Project = () => {
             </ul>
             <div className='links'>
               <Link target='_blank' to={livePage!}>
-              <ExternalLink />
+                <ExternalLink />
                 Live Page</Link>
               <Link target='_blank' to={sourceCode!}>
                 <CodeXml />
