@@ -4,22 +4,30 @@ import Error from '../pages/Error';
 import LandingPage from '../pages/LandingPage';
 import { ProjectList } from '../pages/ProjectList';
 import { About } from '../pages/About';
-
+import { Root } from '../pages/Root';
+import { Gallery } from '../pages/Gallery';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <LandingPage />,
     errorElement: <Error />,
-  },
-  {
-    path: '/projects',
-    element: <ProjectList />,
   }, {
-    path: '/projects/:projectName',
-    element: <Project />
-  }, {
-    path: '/about',
-    element: <About />
+    path: '/home',
+    element: <Root />,
+    children: [{
+      path: '/home/projects',
+      element: <ProjectList />,
+    }, {
+      path: '/home/projects/:projectName',
+      element: <Project />
+    }, {
+      path: '/home/about',
+      element: <About />
+    }, {
+      path: '/home/gallery',
+      element: <Gallery />
+    }]
   }
+
 ]);
