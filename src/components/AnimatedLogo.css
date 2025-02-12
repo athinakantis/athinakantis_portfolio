@@ -1,0 +1,116 @@
+#animatedlogo {
+  width: 331px;
+  height: 347px;
+  position: relative;
+  margin: 0 0 2rem;
+  /*filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.2)); */
+
+  & svg {
+    position: absolute;
+    overflow: visible;
+  }
+}
+
+#athina_a_1 {
+  top: 90px;
+}
+
+#athina_t_1 {
+  top: 8px;
+  left: 62px;
+}
+
+#athina_t_2 {
+  left: 37px;
+  top: 56px;
+}
+
+#athina_h {
+  left: 103px;
+  top: 27px;
+}
+
+#athina_i {
+  left: 150px;
+  top: 58px;
+}
+
+#athina_i_x_1 {
+  left: 152px;
+  top: 15px;
+}
+
+#athina_i_x_2 {
+  left: 152px;
+  top: 9px;
+}
+
+#athina_n {
+  left: 197px;
+  top: 67px;
+}
+
+#athina_a_2 {
+  left: 268px;
+  top: 66px;
+}
+
+#kantis_k_1 {
+  left: 0;
+  top: 219px;
+}
+
+#kantis_k_2 {
+  left: 15px;
+  top: 219px;
+}
+
+#kantis_a_1 {
+  left: 81px;
+  top: 225px;
+}
+#kantis_a_2 {
+  left: 75px;
+  top: 264px;
+}
+
+#kantis_n {
+  left: 143px;
+  top: 224px;
+}
+#kantis_t_1 {
+  left: 212px;
+  top: 215px;
+}
+#kantis_t_2 {
+  left: 202px;
+  top: 215px;
+}
+
+#kantis_i {
+  left: 252px;
+  top: 222px;
+}
+#kantis_i_x {
+  left: 262px;
+  top: 192px;
+}
+#kantis_s_x {
+  left: 252px;
+  top: 334px;
+}
+
+#kantis_s {
+  left: 260px;
+  top: 221px;
+}
+
+#short_line {
+  left: 127px;
+  top: 192px;
+}
+
+#long_line {
+  left: 99px;
+  top: 165px;
+}
