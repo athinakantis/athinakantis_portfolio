@@ -1,8 +1,7 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ProjectT } from '../types/types';
 import projects from '../utils/projects.json'
-import { ExternalLink, CodeXml, House, ChevronRight, ChevronLeft } from 'lucide-react';
-import { Header } from './Header';
+import { ExternalLink, CodeXml, ChevronRight, ChevronLeft } from 'lucide-react';
 
 export const Project = () => {
   const { projectName } = useParams()
@@ -36,7 +35,7 @@ export const Project = () => {
   const handleNavigateNext = () => {
     const indexOfNext = projects.indexOf(project) === projects.length - 1 ? 0 : projects.indexOf(project) + 1
     const nextProject = projects[indexOfNext].title
-    navigate(`/projects/${nextProject.replaceAll(' ', '-')}`)
+    navigate(`/home/projects/${nextProject.replaceAll(' ', '-')}`)
   }
 
   return (
@@ -44,7 +43,7 @@ export const Project = () => {
       <main>
         <div id='project-container'>
           <div className="options">
-            <Link to='/projects'>
+            <Link to='/home/projects'>
               <ChevronLeft />
               Back to Projects
             </Link>

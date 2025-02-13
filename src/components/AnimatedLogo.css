@@ -3,7 +3,7 @@
   height: 347px;
   position: relative;
   margin: 0 0 2rem;
-  /*filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.2)); */
+  filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.2));
 
   & svg {
     position: absolute;
