@@ -1,6 +1,7 @@
-import { art } from '../utils/gallery'
+import { GalleryCategory } from '../components/GalleryCategory';
+import { art } from '../utils/data';
 
-type ArtCategories = 'portraits' | 'landscapes' | 'illustrations';
+export type ArtCategories = 'portraits' | 'landscapes' | 'illustrations';
 
 export const Gallery = () => {
 
@@ -8,12 +9,10 @@ export const Gallery = () => {
     <main>
       <section id="gallery-container" className='container'>
         {Object.keys(art).map(category => (
-          <div key={category} className={`${category} category`}>
-            <h2>{category}</h2>
-            {(art[category as ArtCategories] || []).map(item => <img key={item} src={`/art/${item}`} />)}
-          </div>
+          <GalleryCategory key={category} category={category as ArtCategories} />
         ))}
       </section>
     </main>
   )
+
 }

@@ -26,7 +26,7 @@ function LandingPage() {
   return (
     <>
       <main>
-        <div id="landing-page">
+        <div id="landing-page" >
 
           <AnimatedLogo isFirstVisit={isFirstVisit} />
 
