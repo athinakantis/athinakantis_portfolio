@@ -52,7 +52,6 @@ main {
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -111,11 +110,62 @@ p {
   height: 450px;
 }
 
+#tech-stack-wrapper {
+  margin: 5rem 0 0;
+  text-align: center;
+
+  & h2 {
+    margin: 0 0 4rem;
+  }
+}
+
+#tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 430px;
+  column-gap: 3rem;
+  justify-content: space-between;
+
+  & .tech-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &:hover img {
+      transform: translateY(-22px);
+    }
+
+    &:hover span {
+      transform: translateY(20px);
+      opacity: 1;
+    }
+  }
+
+  & img {
+    transition: all 400ms ease-in-out;
+    height: fit-content;
+    margin: auto;
+  }
+
+  & .tech-span {
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+    text-transform: capitalize;
+    font-family: 'Azeret Mono';
+    color: var(--accentLightPurple);
+    position: absolute;
+    transform: translateY(50px);
+  }
+}
+
 #projects-container {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 7rem 0 0;
 }
 
 /* Project List */
@@ -124,7 +174,7 @@ main:has(#projects-container) {
 }
 
 header {
-  margin: 2rem 0 0;
+  padding: 2rem 0 0;
   text-align: center;
 
   & #logo img {
@@ -164,6 +214,7 @@ header {
 /* Landing Page Styling */
 main:has(#landing-page) {
   height: 100vh;
+  justify-content: center;
 }
 
 #landing-page {
@@ -219,7 +270,7 @@ header nav {
     &.active {
       color: var(--accentMidPink);
 
-      &::after {
+      /* &::after {
         content: '';
         display: block;
         width: 5px;
@@ -229,7 +280,7 @@ header nav {
         top: 1.3rem;
         position: absolute;
         left: 10px;
-      }
+      } */
     }
   }
 }
@@ -277,6 +328,10 @@ main:has(#project-container) {
   }
 
   & .project-details {
+    & p {
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
     & h3 {
       margin: 0 0 1rem;
       font-size: 2.8rem;
@@ -348,12 +403,16 @@ main:has(#project-container) {
 }
 
 /* Gallery Styling */
+main:has(#gallery-container) {
+  height: 82vh;
+  overflow: hidden;
+}
 #gallery-container {
   gap: 0.5rem;
   display: flex;
-  margin: 5rem 0;
 
   & h2 {
+    color: var(--accentStrongPurple);
     text-transform: capitalize;
   }
 
@@ -361,5 +420,13 @@ main:has(#project-container) {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding: 4rem 0 0;
+    height: calc(100vh - 164px);
+    overflow: scroll;
+    & ::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
