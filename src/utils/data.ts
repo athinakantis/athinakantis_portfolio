@@ -23,3 +23,5 @@ export const art = {
     "illustration_5.png"
   ]
 }
+
+export const techStack = ['React', 'TypeScript', 'Docker', 'Git', 'Jenkins', 'HTML', 'CSS', 'JavaScript', 'Vite', 'MySQL', 'AWS', 'Figma', 'Illustrator', 'Photoshop', 'Postman']
