@@ -19,11 +19,23 @@ const icons = [
 
 
 export const Nav = () => {
+  const navRef = useRef<HTMLUListElement>(null)
 
+
+  useEffect(() => {
+    const navSize = navRef.current!.getBoundingClientRect()
+    const children = (navRef.current!.children) as HTMLCollectionOf<HTMLLIElement>
+    for (const el of children) {
+      // Adjust position
+
+    }
+    // NavSize
+    /* {x: 453, y: 66, width: 280, height: 28, top: 66, …} */
+  }, [])
 
   return (
     <nav >
-      <ul>
+      <ul ref={navRef}>
         {icons.map(({ id, path, icon }) => {
 
           return (
