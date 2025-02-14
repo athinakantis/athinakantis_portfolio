@@ -260,9 +260,10 @@ header nav {
   margin: 0 auto;
   & ul {
     display: inline-flex;
+    width: 280px;
+    justify-content: space-evenly;
   }
   & a {
-    margin: 0 1rem;
     position: relative;
     width: fit-content;
     transition: left 300ms ease-out;
