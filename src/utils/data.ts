@@ -13,7 +13,7 @@ export const art = {
         'landscape_4.png',
         'landscape_5.png',
         'landscape_6.png',
-        'landscape_7.png',
+        'landscape_7.png'
     ],
     illustrations: [
         'illustration_1.png',
@@ -27,6 +27,7 @@ export const art = {
 export const techStack = [
     'React',
     'TypeScript',
+    'NodeJS',
     'Docker',
     'Git',
     'Jenkins',
@@ -40,5 +41,4 @@ export const techStack = [
     'Illustrator',
     'Photoshop',
     'Postman',
-    'NodeJS',
 ];
