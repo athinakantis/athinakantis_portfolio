@@ -3,6 +3,7 @@ import { Palette, CircleUserRound, BriefcaseBusiness, Github, Linkedin } from 'l
 import { AnimatedLogo } from '../components/AnimatedLogo';
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
+import { Spinner } from '../components/Spinner';
 
 
 function LandingPage() {
@@ -20,13 +21,13 @@ function LandingPage() {
   }, []);
 
   if (isLoading) {
-    return (<></>)
+    return <Spinner />
   }
 
   return (
     <>
       <main>
-        <div id="landing-page" >
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="landing-page" >
 
           <AnimatedLogo isFirstVisit={isFirstVisit} />
 
@@ -36,12 +37,10 @@ function LandingPage() {
             <nav>
               <ul>
                 <li>
-                  <Link to='/'></Link>
-                </li>
-                <li>
                   <Link to='/home/projects'>
                     <BriefcaseBusiness />
-                    Projects</Link>
+                    Projects
+                  </Link>
                 </li>
                 <li>
                   <Link to='/home/about'>
@@ -75,7 +74,7 @@ function LandingPage() {
               </ul>
             </div>
           </motion.div>
-        </div>
+        </motion.section>
       </main>
     </>
   );
