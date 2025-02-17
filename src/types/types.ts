@@ -21,4 +21,5 @@ export interface ProjectT {
   } | null,
   livePage: string | null,
   sourceCode: string
+  figmaDesign?: string;
 }
