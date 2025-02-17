@@ -3,10 +3,10 @@
     "id": 0,
     "title": "PancakeCo",
     "description": "This Vanilla JavaScript pancake shop features custom illustrations, a dynamic cart system, and real-time pricing based on toppings and quantities. Built with responsive design, it ensures smooth functionality across all devices without external frameworks.",
-    "tags": ["html", "css", "js", "adobe AI"],
+    "tags": ["HTML", "CSS", "JS", "adobe AI"],
     "preview": {
       "type": "img",
-      "src": "/pancakeCo_preview.png",
+      "src": "/project_previews/pancakeCo_mobile_homepage.png",
       "alt": "Screenshot of Pancake Co web app"
     },
     "cardPreview": {
@@ -16,12 +16,13 @@
     },
     "features": ["Cart System", "Dynamic Pricing", "Responsive Design"],
     "technologies": ["Vanilla JS"],
-    "screenshots": [],
+    "screenshots": ["/project_previews/pancakeCo_desktop_homepage_2.png"],
     "embeddedContent": {
       "figma": "https://embed.figma.com/design/ytmJ9blLohUMTD7UlsRpTo/Pancake-Co-Style-Guide-%2B-Wireframe?node-id=0-1&embed-host=share"
     },
     "livePage": "https://athinakantis.github.io/pancakeCo/",
-    "sourceCode": "https://github.com/athinakantis/pancakeCo"
+    "sourceCode": "https://github.com/athinakantis/pancakeCo",
+    "figmaDesign": "https://www.figma.com/design/ytmJ9blLohUMTD7UlsRpTo/Pancake-Co-Style-Guide-%2B-Wireframe?node-id=0-1&t=f8xE1uuoHPZ83B0l-1"
   },
   {
     "id": 1,
@@ -30,8 +31,8 @@
     "tags": ["React", "HTML", "CSS", "JS"],
     "preview": {
       "type": "img",
-      "src": "",
-      "alt": "Video demo of a Multi-Step Form"
+      "src": "/project_previews/msf_desktop.png",
+      "alt": "Screenshot of Multi-Step Form"
     },
     "cardPreview": {
       "src": "/msf_preview.png",
@@ -52,7 +53,7 @@
     "tags": ["HTML", "CSS", "JS"],
     "preview": {
       "type": "mov",
-      "src": "/Launch_Countdown_Preview.mov",
+      "src": "/project_previews/Launch_Countdown_Preview.mov",
       "alt": "Video of digital fireworks"
     },
     "cardPreview": {
