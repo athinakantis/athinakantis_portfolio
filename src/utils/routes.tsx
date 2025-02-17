@@ -6,6 +6,7 @@ import { ProjectList } from '../pages/ProjectList';
 import { About } from '../pages/About';
 import { Root } from '../pages/Root';
 import { Gallery } from '../pages/Gallery';
+import { Contact } from '../pages/Contact';
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,9 @@ export const router = createBrowserRouter([
     }, {
       path: '/home/gallery',
       element: <Gallery />
+    }, {
+      path: '/home/contact',
+      element: <Contact />
     }]
   }
 
