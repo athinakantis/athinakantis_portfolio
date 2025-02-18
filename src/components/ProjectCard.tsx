@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ProjectT } from '../types/types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 type ProjectCardProps = {
   project: ProjectT;
@@ -7,15 +8,17 @@ type ProjectCardProps = {
 
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
+  const navigate = useNavigate()
   const { title, cardPreview } = project
+
   return (
-    <div className='project-card-container'>
-      <Link to={`/home/projects/${title.split(' ').join('-')}`}>
-        <img src={cardPreview.src} alt={cardPreview.alt} />
+    <button className='project-card-container' onClick={() => navigate(`/home/projects/${title.split(' ').join('-')}`)}>
+      <div >
+        <LazyLoadImage effect='opacity' height={'142.91px'} width={310} src={cardPreview.src} alt={cardPreview.alt} />
         <div className="card-details">
           <h2>{cardPreview.description}</h2>
         </div>
-      </Link>
-    </div >
+      </div >
+    </button>
   )
 }
