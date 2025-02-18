@@ -1,26 +1,26 @@
 export const art = {
     portraits: [
-        'portrait_1.png',
-        'portrait_2.png',
-        'portrait_3.png',
-        'portrait_4.png',
-        'portrait_5.png',
+        {src: 'portrait_1.png', height: 300},
+        {src: 'portrait_2.png', height: 450},
+        {src: 'portrait_3.png', height: 450},
+        {src: 'portrait_4.png', height: 450},
+        {src: 'portrait_5.png', height: 450}  
     ],
     landscapes: [
-        'landscape_1.png',
-        'landscape_2.png',
-        'landscape_3.png',
-        'landscape_4.png',
-        'landscape_5.png',
-        'landscape_6.png',
-        'landscape_7.png'
+        {src: 'landscape_1.png', height: 195},
+        {src: 'landscape_2.png', height: 194},
+        {src: 'landscape_3.png', height: 497},
+        {src: 'landscape_4.png', height: 450},
+        {src: 'landscape_5.png', height: 459},
+        {src: 'landscape_6.png', height: 537},
+        {src: 'landscape_7.png', height: 490}
     ],
     illustrations: [
-        'illustration_1.png',
-        'illustration_2.png',
-        'illustration_3.png',
-        'illustration_4.png',
-        'illustration_5.png',
+        {src:'illustration_1.png', height: 424},
+        {src: 'illustration_3.png', height: 400},
+        {src: 'illustration_2.png', height: 182},
+        {src: 'illustration_4.png', height: 300},
+        {src: 'illustration_5.png', height: 441}
     ],
 };
 
