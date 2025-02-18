@@ -4,6 +4,8 @@ export interface ProjectT {
   description: string,
   tags: string[],
   preview: {
+    height: number,
+    width: number,
     type: string,
     src: string,
     alt: string
