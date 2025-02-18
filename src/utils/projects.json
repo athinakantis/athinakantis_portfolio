@@ -5,6 +5,8 @@
     "description": "This Vanilla JavaScript pancake shop features custom illustrations, a dynamic cart system, and real-time pricing based on toppings and quantities. Built with responsive design, it ensures smooth functionality across all devices without external frameworks.",
     "tags": ["HTML", "CSS", "JS", "adobe AI"],
     "preview": {
+      "width": 343,
+      "height": 1240,
       "type": "img",
       "src": "/project_previews/pancakeCo_mobile_homepage.png",
       "alt": "Screenshot of Pancake Co web app"
@@ -30,6 +32,7 @@
     "description": "A Single Page Form Application powered by React",
     "tags": ["React", "HTML", "CSS", "JS"],
     "preview": {
+      "width": "100%",
       "type": "img",
       "src": "/project_previews/msf_desktop.png",
       "alt": "Screenshot of Multi-Step Form"
@@ -52,6 +55,8 @@
     "description": "Countdown timer to my nieces birthday",
     "tags": ["HTML", "CSS", "JS"],
     "preview": {
+      "height": 696,
+      "width": 394,
       "type": "mov",
       "src": "/project_previews/Launch_Countdown_Preview.mov",
       "alt": "Video of digital fireworks"
