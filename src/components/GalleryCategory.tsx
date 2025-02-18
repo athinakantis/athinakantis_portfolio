@@ -1,27 +1,32 @@
 import { art } from '../utils/data';
 import { ArtCategories } from '../pages/Gallery';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
+import { motion } from 'motion/react';
 
 interface GalleryCategoryProps {
-  category: ArtCategories;
+  category: ArtCategories,
+  onImageLoad: () => void,
+  allLoaded: boolean
 }
 
-export const GalleryCategory = ({ category }: GalleryCategoryProps) => {
+export const GalleryCategory = ({ category, onImageLoad, allLoaded }: GalleryCategoryProps) => {
 
   return (
     <div
       key={category}
       className={`${category} category`}
     >
-      <h2>{category}</h2>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        animate={allLoaded ? { opacity: 1 } : {}}>{category}</motion.h2>
       {(art[category as ArtCategories] || []).map((item) => (
-        <LazyLoadImage
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={allLoaded ? { opacity: 1 } : {}}
           width={300}
           height={item.height}
-          effect='opacity'
-          threshold={100}
           src={`/art/${item.src}`}
+          onLoad={onImageLoad}
         />
       ))}
     </div>
