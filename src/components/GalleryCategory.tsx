@@ -21,6 +21,7 @@ export const GalleryCategory = ({ category, onImageLoad, allLoaded }: GalleryCat
         animate={allLoaded ? { opacity: 1 } : {}}>{category}</motion.h2>
       {(art[category as ArtCategories] || []).map((item) => (
         <motion.img
+          key={item.src}
           initial={{ opacity: 0 }}
           animate={allLoaded ? { opacity: 1 } : {}}
           width={300}
