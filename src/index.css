@@ -17,15 +17,6 @@
   --darkTheme07: #858585;
   --darkTheme08: #dedede;
 
-  --lightTheme01: #ffffff;
-  --lightTheme02: #e9e7e4;
-  --lightTheme03: #c5ad98;
-  --lightTheme04: #ab8b70;
-  --lightTheme05: #66503e;
-  --lightTheme06: #3a3028;
-  --lightTheme07: #28211a;
-  --lightTheme08: #1b1612;
-
   --accentDarkBlue: #0c1020;
   --accentDarkOrange: #2d1304;
   --accentDarkPurple: #2e011d;
@@ -341,13 +332,13 @@ main:has(#project-container) {
     margin: 0 0 1rem;
   }
 
-  & img {
-    max-width: 100%;
-  }
-
   & #project-info {
     display: flex;
     gap: 2rem;
+
+    & span {
+      max-width: 736px;
+    }
   }
 
   & .screenshot-container {
@@ -447,7 +438,7 @@ main:has(#project-container) {
     font-size: clamp(1.8rem, 5vw, 3rem);
     max-width: 800px;
     margin: 4rem 0;
-    color: var(--accentVeryLightPink);
+    color: var(--accentStrongPurple);
     text-align: center;
     margin: 0 auto;
     width: clamp(150px, 80vw, 615px);
@@ -634,6 +625,7 @@ main:has(#contact-container) {
   text-align: center;
 
   & h1 {
+    color: var(--accentStrongPurple);
     margin: 0 0 1rem;
     font-size: clamp(1rem, 4.5vw, 2rem);
   }
@@ -671,6 +663,36 @@ main:has(#contact-container) {
       justify-content: center;
       gap: 0.7rem;
     }
+  }
+}
+
+/* Error Page */
+main:has(#error-container) {
+  width: 100vw;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+#error-container {
+  background-color: var(--darkTheme02);
+  width: fit-content;
+  padding: 2rem;
+  text-align: center;
+  width: clamp(140px, 88vw, 450px);
+
+  & h2 {
+    line-height: 1;
+    margin: 0 0 0.3rem;
+  }
+
+  & a {
+    margin: 1rem 0 0;
+    display: block;
+  }
+
+  & #logo {
+    margin: 0 auto 1rem;
+    width: clamp(1rem, 10vw, 7rem);
   }
 }
 

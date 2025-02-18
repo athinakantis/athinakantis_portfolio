@@ -2,10 +2,14 @@ import { Link } from 'react-router-dom';
 
 function Error() {
   return (
-    <div id="error-container">
-      <h2>Something went wrong</h2>
-      <Link to='/'>Back home</Link>
-    </div>
+    <main>
+      <div id="error-container">
+        <img id='logo' src="/logo_300w.png" alt="" />
+        <h2>Something unexpected happened</h2>
+        <p>Sorry about that!</p>
+        <Link to='/'>Back home</Link>
+      </div>
+    </main>
   );
 }
 
