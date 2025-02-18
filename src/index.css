@@ -336,8 +336,8 @@ main:has(#project-container) {
     display: flex;
     gap: 2rem;
 
-    & span {
-      max-width: 736px;
+    & img {
+      max-width: 100%;
     }
   }
 
