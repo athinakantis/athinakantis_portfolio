@@ -4,7 +4,8 @@ import { techStack } from '../utils/data'
 import { ProjectT } from '../types/types'
 import { Spinner } from '../components/Spinner'
 import { motion } from 'motion/react'
-
+import { LazyLoadComponent, LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 export const ProjectList = () => {
   const [projects, setProjects] = useState<null | ProjectT[]>(null)
@@ -32,7 +33,6 @@ export const ProjectList = () => {
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} id='projects-container' className='container'>
       <div id='project-cards-container'>
-
         {projects?.map(project => <ProjectCard key={project.id} project={project} />)}
       </div>
       <div id="tech-stack-wrapper">
@@ -40,7 +40,7 @@ export const ProjectList = () => {
         <div id="tech-stack-container">
           {techStack.map(tech => (
             <div key={tech} className='tech-container'>
-              <img src={`/tech_stack/${tech.toLowerCase()}.svg`} alt='' />
+              <LazyLoadImage effect='opacity' height={35} width={35} src={`/tech_stack/${tech.toLowerCase()}.svg`} alt='' />
               <span className='tech-span'>{tech}</span>
             </div>
           ))}
