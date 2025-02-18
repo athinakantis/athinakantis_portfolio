@@ -5,6 +5,7 @@ import { ExternalLink, CodeXml, ChevronRight, ChevronLeft, Figma } from 'lucide-
 import { motion, useAnimation } from 'motion/react';
 import { useRef, useEffect } from 'react';
 
+
 export const Project = () => {
   const { projectName } = useParams()
   const navigate = useNavigate()
@@ -36,6 +37,7 @@ export const Project = () => {
   } = project as ProjectT;
 
   const handleNavigateNext = () => {
+
     controls.start({ opacity: [0, 1], transition: { duration: 1 } });
     const indexOfNext = projects.indexOf(project) === projects.length - 1 ? 0 : projects.indexOf(project) + 1
     const nextProject = projects[indexOfNext].title
