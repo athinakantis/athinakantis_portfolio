@@ -4,9 +4,6 @@ import projects from '../utils/projects.json'
 import { ExternalLink, CodeXml, ChevronRight, ChevronLeft, Figma } from 'lucide-react';
 import { motion, useAnimation } from 'motion/react';
 import { useRef, useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/opacity.css';
-
 
 export const Project = () => {
   const { projectName } = useParams()
@@ -65,10 +62,7 @@ export const Project = () => {
 
       <div id='project-info'>
         {preview.type === 'img' ? (
-          <LazyLoadImage
-            effect='opacity'
-            width={preview.width}
-            height={preview?.height}
+          <img
             id='preview'
             src={preview.src}
             alt={preview.alt
@@ -117,8 +111,7 @@ export const Project = () => {
         screenshots.length > 0 && (
           <div className='screenshot-container'>
             {screenshots.map((ss) => (
-              <LazyLoadImage
-                effect='opacity'
+              <img
                 key={ss}
                 src={ss}
                 alt=''
