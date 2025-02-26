@@ -767,6 +767,22 @@ main:has(#error-container) {
   }
 }
 
+@media only screen and (max-width: 710px) {
+  #project-container {
+    & #project-info {
+      flex-direction: column-reverse;
+
+      & #preview {
+        margin: 2rem auto;
+      }
+    }
+
+    & .screenshot-container {
+      margin: 2rem 0 0;
+    }
+  }
+}
+
 @media only screen and (max-width: 335px) {
   #about {
     & #intro {
