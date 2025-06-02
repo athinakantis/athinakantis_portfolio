@@ -1,5 +1,29 @@
 [
   {
+    "id": 4,
+    "title": "Illusia Ry Storage Solutions",
+    "description": "",
+    "tags": ["React", "OAuth"],
+    "preview": {
+      "height": 696,
+      "width": 394,
+      "type": "mov",
+      "src": "/project_previews/Launch_Countdown_Preview.mov",
+      "alt": "Video of digital fireworks"
+    },
+    "cardPreview": {
+      "src": "/countdown_preview.png",
+      "alt": "",
+      "description": "Illusia Ry Storage Solutions"
+    },
+    "features": ["React", "OAuth"],
+    "technologies": ["React", "Supabase", "Postgresql"],
+    "screenshots": [],
+    "embeddedContent": null,
+    "livePage": "https://illusia.netlify.app/",
+    "sourceCode": "https://github.com/illusia-ry-organization/illusia_ry"
+  },
+  {
     "id": 0,
     "title": "PancakeCo",
     "description": "This Vanilla JavaScript pancake shop features custom illustrations, a dynamic cart system, and real-time pricing based on toppings and quantities. Built with responsive design, it ensures smooth functionality across all devices without external frameworks.",
@@ -72,5 +96,29 @@
     "embeddedContent": null,
     "livePage": "https://athinakantis.github.io/Front_End_Mentor/Launch_Countdown/",
     "sourceCode": "https://github.com/athinakantis/Front_End_Mentor/tree/main/Launch_Countdown"
+  },
+  {
+    "id": 3,
+    "title": "Full-Stack Countries App",
+    "description": "",
+    "tags": ["React", "REST API", "OAuth"],
+    "preview": {
+      "height": 696,
+      "width": 394,
+      "type": "mov",
+      "src": "/project_previews/Launch_Countdown_Preview.mov",
+      "alt": "Video of digital fireworks"
+    },
+    "cardPreview": {
+      "src": "/countdown_preview.png",
+      "alt": "",
+      "description": "Countries of the World App"
+    },
+    "features": ["React", "REST API", "OAuth", "E2E Testing"],
+    "technologies": ["React", "TailwindCSS"],
+    "screenshots": [],
+    "embeddedContent": null,
+    "livePage": "https://countries-of-the-world-kantis.netlify.app/",
+    "sourceCode": "https://github.com/athinakantis/full-stack-countries-app"
   }
 ]

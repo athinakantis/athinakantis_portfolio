@@ -21,7 +21,7 @@ const About = ({ onImageLoad, allLoaded }: AboutComponentProps) => {
           animate={allLoaded ? { opacity: 1 } : {}}
           onLoad={onImageLoad}
           id='portrait'
-          src='/pfp.png'
+          src='/IMG_7939.jpeg'
           alt=''
         />
         <motion.img
@@ -45,7 +45,7 @@ const About = ({ onImageLoad, allLoaded }: AboutComponentProps) => {
         id='current-status-container'>
         <div>
           <h3>Current Status:</h3>
-          <h4>Looking for an internship!</h4>
+          <h4>Interning!</h4>
         </div>
         <button
           onClick={() => window.open('mailto:athina.kantis@gmail.com')}
@@ -75,8 +75,7 @@ const About = ({ onImageLoad, allLoaded }: AboutComponentProps) => {
               <li>I was born -96!</li>
               <li>Catperson! 🐱</li>
               <li>
-                Outside of coding I like to weight train but, coding is
-                pretty much all I do these days
+                Outside of coding I like to weight train and play strategic games!
               </li>
             </ul>
           </div>

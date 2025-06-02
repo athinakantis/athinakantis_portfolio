@@ -1,6 +1,6 @@
 import { Spinner } from '../components/Spinner';
 import { useEffect, useState } from 'react';
-import AboutComponent from '../components/AboutComponent'
+import AboutComponent from '../components/About'
 
 export const About = () => {
     const [loadedImages, setLoadedImages] = useState(0);
