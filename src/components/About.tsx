@@ -1,35 +1,26 @@
 import { motion } from 'motion/react'
+import portrait from '../assets/about/IMG_7939.jpeg';
+import toddlerPortrait from '../assets/about/portrait_athina.jpg';
+import drawing from '../assets/about/old_drawing_700w.png'
 
-interface AboutComponentProps {
-  onImageLoad: () => void
-  allLoaded: boolean
-}
-
-const About = ({ onImageLoad, allLoaded }: AboutComponentProps) => {
+const About = () => {
   return (
-    <motion.div initial={{ opacity: 0 }}
-      animate={allLoaded ? { opacity: 1 } : {}}>
-      <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>Hello! I’m Athina, a Web Developer and Artist</motion.h1 >
+    <div>
+      <h1>Hello! I’m Athina, a Web Developer and Artist</h1 >
       <div
         id='intro'>
         <h2>
           I’m an art and tech lover studying Full-Stack Web Development at
           Business College Helsinki
         </h2>
-        <motion.img
-          initial={{ opacity: 0 }}
-          animate={allLoaded ? { opacity: 1 } : {}}
-          onLoad={onImageLoad}
+        <img
           id='portrait'
-          src='/IMG_7939.jpeg'
+          src={portrait}
           alt=''
         />
-        <motion.img
-          initial={{ opacity: 0 }}
-          animate={allLoaded ? { opacity: 1 } : {}}
-          onLoad={onImageLoad}
+        <img
           id='old_drawing'
-          src='/old_drawing_700w.png'
+          src={drawing}
           alt='Drawn illustration made by a young Athina portraying a girl by a house on a cloudy day'
         />
         <p>
@@ -60,12 +51,9 @@ const About = ({ onImageLoad, allLoaded }: AboutComponentProps) => {
         id='about-me-container'
       >
         <div id='about-me'>
-          <motion.img
-            initial={{ opacity: 0 }}
-            animate={allLoaded ? { opacity: 1 } : {}}
-            onLoad={onImageLoad}
+          <img
             id='mini-me'
-            src='/portrait_athina.jpg'
+            src={toddlerPortrait}
             alt=''
           />
           <div id='a-little-bit-about-me-container'>
@@ -81,7 +69,7 @@ const About = ({ onImageLoad, allLoaded }: AboutComponentProps) => {
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   )
 }
 

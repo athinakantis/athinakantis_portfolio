@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { ProjectT } from '../types/types';
-import projects from '../utils/projects.json'
+import { Project as ProjectT } from '../types/types';
+import { projectsData } from '../utils/projects';
 import { ExternalLink, CodeXml, ChevronRight, ChevronLeft, Figma } from 'lucide-react';
 import { motion, useAnimation } from 'motion/react';
 import { useRef, useEffect } from 'react';
@@ -12,13 +12,15 @@ export const Project = () => {
   const divRef = useRef(null)
   const controls = useAnimation();
 
+
+
   if (!projectName) {
-    throw new Error('missing projectname')
+    throw new Error('Missing projectname')
   }
 
   // Format project name from parameters to find matching project from projects.json
   const formattedProject = projectName.replaceAll('-', ' ').toLowerCase()
-  const project = projects.find(project => project.title.toLowerCase() === formattedProject)
+  const project = projectsData.find(project => project.title.toLowerCase() === formattedProject)
 
   if (!project) {
     throw new Error('Project not found')
@@ -33,14 +35,12 @@ export const Project = () => {
     livePage,
     sourceCode,
     figmaDesign
-
   } = project as ProjectT;
 
   const handleNavigateNext = () => {
-
     controls.start({ opacity: [0, 1], transition: { duration: 1 } });
-    const indexOfNext = projects.indexOf(project) === projects.length - 1 ? 0 : projects.indexOf(project) + 1
-    const nextProject = projects[indexOfNext].title
+    const indexOfNext = projectsData.indexOf(project) === projectsData.length - 1 ? 0 : projectsData.indexOf(project) + 1
+    const nextProject = projectsData[indexOfNext].title
     navigate(`/home/projects/${nextProject.replaceAll(' ', '-')}`)
   }
 
@@ -100,7 +100,7 @@ export const Project = () => {
               Source Code
             </Link>
             {figmaDesign &&
-              <Link target='_blank' to={'https://www.figma.com/design/ytmJ9blLohUMTD7UlsRpTo/Pancake-Co-Style-Guide-%2B-Wireframe?node-id=0-1&t=f8xE1uuoHPZ83B0l-1'}>
+              <Link target='_blank' to={figmaDesign}>
                 <Figma />
                 View Figma Design
               </Link>

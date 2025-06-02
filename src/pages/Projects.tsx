@@ -3,7 +3,7 @@ import { techStack } from '../utils/data'
 import { motion } from 'motion/react'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
-import projects from '../utils/projects.json'
+import { projectsData as projects } from '../utils/projects';
 
 export const Projects = () => {
 

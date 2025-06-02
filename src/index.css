@@ -359,7 +359,8 @@ main:has(#project-container) {
     & .tags {
       margin: 2rem 0 1rem;
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
 
       & li {
         text-align: center;
