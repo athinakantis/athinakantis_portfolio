@@ -62,7 +62,7 @@ export const Project = () => {
         </button>
       </div>
 
-      <div id='project-info'>
+      <div id='project-info' className={`direction-${preview.direction}`}>
         {preview.type === 'img' ? (
           <img
             id='preview'

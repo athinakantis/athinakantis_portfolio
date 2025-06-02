@@ -16,9 +16,9 @@ export const Projects = () => {
         <h2>Tech Stack</h2>
         <div id="tech-stack-container">
           {techStack.map(tech => (
-            <div key={tech} className='tech-container'>
-              <LazyLoadImage effect='opacity' height={35} width={35} src={`/tech_stack/${tech.toLowerCase()}.svg`} alt='' />
-              <p className='tech-p'>{tech}</p>
+            <div key={tech.label} className='tech-container'>
+              <LazyLoadImage effect='opacity' height={35} width={35} src={tech.svg} alt={tech.label} />
+              <p className='tech-p'>{tech.label}</p>
             </div>
           ))}
         </div>

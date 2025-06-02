@@ -8,7 +8,8 @@ export interface Project {
     width?: string | number,
     type: string,
     src: string,
-    alt: string
+    alt: string,
+    direction: 'column' | 'row'
   },
   cardPreview: {
     src: string,

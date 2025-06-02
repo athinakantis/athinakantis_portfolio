@@ -5,12 +5,14 @@ import countriesPreview from '../assets/projects/countries_preview.png';
 import illusiaPreview from '../assets/projects/illusia_preview.png'
 import { Project } from '../types/types';
 
+let previewPath = 'https://athinakantis.github.io/portfolio_assets/previews/'
+
 export const projectsData: Project[] = [
   {
     id: 4,
     title: 'Illusia Ry Storage Solutions',
     description:
-      'This application was developed for Illusia Ry, with the means of allowing users to book items used for LARP events. Users can log in, view and manage their bookings. This site also uses Role-Based Access Control, email and app notifications and intuitive admin features, such as user and booking management, and a dashboard. The site currently has three language options.',
+      'This application was developed for Illusia Ry, with the means of allowing users to book items used for LARP events. Users can log in, view and manage their bookings. This site also uses Role-Based Access Control, email and app notifications and intuitive admin features, such as user, item and booking management, and a dashboard. The site currently has three language options.',
     tags: [
       'React',
       "TypeScript",
@@ -23,8 +25,9 @@ export const projectsData: Project[] = [
     ],
     preview: {
       type: 'img',
-      src: '',
-      alt: 'Add preview here',
+      src: previewPath + 'illusia_home.png',
+      alt: '',
+      direction: 'column'
     },
     cardPreview: {
       src: illusiaPreview,
@@ -49,8 +52,9 @@ export const projectsData: Project[] = [
       width: 343,
       height: 1240,
       type: 'img',
-      src: '/project_previews/pancakeCo_mobile_homepage.png',
+      src: previewPath + 'pancakeCo_mobile_homepage.png',
       alt: 'Screenshot of Pancake Co web app',
+      direction: 'row'
     },
     cardPreview: {
       src: pancakePreview,
@@ -59,7 +63,7 @@ export const projectsData: Project[] = [
     },
     features: ['Cart System', 'Dynamic Pricing', 'Responsive Design'],
     technologies: ['Vanilla JS'],
-    screenshots: ['/project_previews/pancakeCo_desktop_homepage_2.png'],
+    screenshots: [(previewPath + '/pancakeCo_desktop_homepage_2.png')],
     embeddedContent: {
       figma:
         'https://embed.figma.com/design/ytmJ9blLohUMTD7UlsRpTo/Pancake-Co-Style-Guide-%2B-Wireframe?node-id=0-1&embed-host=share',
@@ -72,14 +76,15 @@ export const projectsData: Project[] = [
   {
     id: 3,
     title: 'Countries of the World',
-    description: '',
+    description: 'This project lets you browse the countries of the world and learn more about each country. There is a log-in option, and users can add countries to their favourites!',
     tags: ['React', 'REST API', 'OAuth', 'Tailwind', "Dark Mode", "TypeScript"],
     preview: {
       height: 696,
       width: 394,
       alt: '',
       type: 'img',
-      src: countriesPreview,
+      src: previewPath + 'countries_screenshot.png',
+      direction: 'column'
     },
     cardPreview: {
       src: countriesPreview,
@@ -103,8 +108,9 @@ export const projectsData: Project[] = [
       height: 696,
       width: 394,
       type: 'mov',
-      src: '/project_previews/Launch_Countdown_Preview.mov',
+      src: previewPath + 'Launch_Countdown_Preview.mov',
       alt: 'Video of digital fireworks',
+      direction: 'row'
     },
     cardPreview: {
       src: countdownPreview,
@@ -128,8 +134,9 @@ export const projectsData: Project[] = [
     preview: {
       width: '100%',
       type: 'img',
-      src: '/project_previews/msf_desktop.png',
+      src: previewPath + '/msf_desktop.png',
       alt: 'Screenshot of Multi-Step Form',
+      direction: 'column'
     },
     cardPreview: {
       src: MSFPreview,
