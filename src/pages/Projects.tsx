@@ -1,17 +1,11 @@
-import { useState } from 'react'
 import { ProjectCard } from '../components/ProjectCard'
 import { techStack } from '../utils/data'
-import { Spinner } from '../components/Spinner'
 import { motion } from 'motion/react'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import projects from '../utils/projects.json'
 
-export const ProjectList = () => {
-  const [loading, setLoading] = useState(false)
-
-
-  if (loading) return <Spinner />
+export const Projects = () => {
 
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} id='projects-container' className='container'>

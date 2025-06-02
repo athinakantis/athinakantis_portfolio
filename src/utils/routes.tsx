@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { Project } from '../components/Project';
 import Error from '../pages/Error';
 import LandingPage from '../pages/LandingPage';
-import { ProjectList } from '../pages/ProjectList';
+import { Projects } from '../pages/Projects';
 import { About } from '../pages/About';
 import { Root } from '../pages/Root';
 import { Gallery } from '../pages/Gallery';
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
     errorElement: <Error />,
     children: [{
       path: '/home/projects',
-      element: <ProjectList />,
+      element: <Projects />,
     }, {
       path: '/home/projects/:projectName',
       element: <Project />
