@@ -4,12 +4,13 @@ import MSFPreview from '../assets/projects/msf_preview.png'
 import countriesPreview from '../assets/projects/countries_preview.png';
 import illusiaPreview from '../assets/projects/illusia_preview.png'
 import { Project } from '../types/types';
+import birthdayPreview from '../assets/projects/birthday_countdown.mp4'
 
 let previewPath = 'https://athinakantis.github.io/portfolio_assets/previews/'
 
 export const projectsData: Project[] = [
   {
-    id: 4,
+    id: 1,
     title: 'Illusia Ry Storage Solutions',
     description:
       'This application was developed for Illusia Ry, with the means of allowing users to book items used for LARP events. Users can log in, view and manage their bookings. This site also uses Role-Based Access Control, email and app notifications and intuitive admin features, such as user, item and booking management, and a dashboard. The site currently has three language options.',
@@ -43,7 +44,7 @@ export const projectsData: Project[] = [
     sourceCode: 'https://github.com/illusia-ry-organization/illusia_ry',
   },
   {
-    id: 0,
+    id: 2,
     title: 'PancakeCo',
     description:
       'This Vanilla JavaScript pancake shop features custom illustrations, a dynamic cart system, and real-time pricing based on toppings and quantities. Built with responsive design, it ensures smooth functionality across all devices without external frameworks.',
@@ -52,7 +53,7 @@ export const projectsData: Project[] = [
       width: 343,
       height: 1240,
       type: 'img',
-      src: previewPath + 'pancakeCo_mobile_homepage.png',
+      src: (previewPath + '/pancakeCo_desktop_homepage_2.png'),
       alt: 'Screenshot of Pancake Co web app',
       direction: 'row'
     },
@@ -63,7 +64,7 @@ export const projectsData: Project[] = [
     },
     features: ['Cart System', 'Dynamic Pricing', 'Responsive Design'],
     technologies: ['Vanilla JS'],
-    screenshots: [(previewPath + '/pancakeCo_desktop_homepage_2.png')],
+    screenshots: [previewPath + 'pancakeCo_mobile_homepage.png'],
     embeddedContent: {
       figma:
         'https://embed.figma.com/design/ytmJ9blLohUMTD7UlsRpTo/Pancake-Co-Style-Guide-%2B-Wireframe?node-id=0-1&embed-host=share',
@@ -99,7 +100,7 @@ export const projectsData: Project[] = [
     sourceCode: 'https://github.com/athinakantis/full-stack-countries-app',
   },
     {
-    id: 2,
+    id: 4,
     title: 'Birthday Countdown',
     description:
       'This simple countdown is done with regular CSS, JS and HTML. It features a countdown down to the second, and a display of explosive fireworks on my nieces birthday.',
@@ -108,7 +109,7 @@ export const projectsData: Project[] = [
       height: 696,
       width: 394,
       type: 'mov',
-      src: previewPath + 'Launch_Countdown_Preview.mov',
+      src: birthdayPreview,
       alt: 'Video of digital fireworks',
       direction: 'row'
     },
@@ -127,7 +128,7 @@ export const projectsData: Project[] = [
       'https://github.com/athinakantis/Front_End_Mentor/tree/main/Launch_Countdown',
   },
    {
-    id: 1,
+    id: 5,
     title: 'Multi Step Form',
     description: 'A Single Page Form Application powered by React.',
     tags: ['React', 'HTML', 'CSS', 'JS', 'Responsive'],

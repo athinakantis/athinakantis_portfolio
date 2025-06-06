@@ -327,6 +327,7 @@ main:has(#project-container) {
 #project-container {
   padding: 2rem;
   max-width: 1000px;
+  width: 100%;
 
   & #preview {
     margin: 0 0 1rem;
@@ -335,10 +336,8 @@ main:has(#project-container) {
   & #project-info {
     display: flex;
     gap: 2rem;
-
-    &.direction-column {
-      flex-direction: column-reverse;
-    }
+    flex-direction: column;
+    transition: opacity 300ms;
 
     & img {
       max-width: 100%;
@@ -346,8 +345,13 @@ main:has(#project-container) {
   }
 
   & .screenshot-container {
+    margin-top: 4rem;
     & > img {
       max-width: 100%;
+    }
+
+    & p {
+      margin-bottom: 1rem;
     }
   }
 

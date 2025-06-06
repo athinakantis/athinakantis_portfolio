@@ -1,20 +1,20 @@
-import { useNavigate } from 'react-router-dom';
+import { Dispatch, SetStateAction } from 'react';
 import { Project as ProjectT } from '../types/types';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 type ProjectCardProps = {
   project: ProjectT;
+  handleClick: Dispatch<SetStateAction<number | null>>
 };
 
-export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const navigate = useNavigate();
-  const { title, cardPreview } = project;
+export const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
+  const { cardPreview } = project;
 
 
   return (
     <button
       className='project-card-container'
-      onClick={() => navigate(`/home/projects/${title.split(' ').join('-')}`, { state: { id: project.id } })}
+      onClick={() => handleClick(project.id)}
     >
       <div>
         <LazyLoadImage
