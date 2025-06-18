@@ -22,7 +22,6 @@ export const Projects = () => {
       try {
         const results = await Promise.all(projects.map(preloadProjectMedia));
         setLoadedProjects(results);
-        console.log(results)
         setLoading(false);
       } catch (err) {
         console.error('Error preloading images:', err);

@@ -4,7 +4,7 @@ import { AnimatedLogo } from '../components/AnimatedLogo';
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { Spinner } from '../components/Spinner';
-
+import Aurora from '../components/Aurora';
 
 function LandingPage() {
   const [isFirstVisit, setIsFirstVisit] = useState<boolean>(false);
@@ -27,8 +27,11 @@ function LandingPage() {
   return (
     <>
       <main>
+        <Aurora colorStops={["#ffac7b", "#5227FF", "#f94fff"]}
+          amplitude={1}
+          blend={0.5}
+        />
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="landing-page" >
-
           <AnimatedLogo isFirstVisit={isFirstVisit} />
 
           <motion.div className="content" initial={isFirstVisit ? { opacity: 0 } : { opacity: 1 }} animate={isFirstVisit ? { opacity: 1, transition: { delay: 3, duration: 1.2, ease: 'easeOut' } } : {}}>
@@ -75,6 +78,10 @@ function LandingPage() {
             </div>
           </motion.div>
         </motion.section>
+        <div className="isolate" style={{ height: '100%' }}>
+          <div className="noise"></div>
+          <div className="overlay"></div>
+        </div>
       </main>
     </>
   );

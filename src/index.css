@@ -37,8 +37,15 @@
 
   --accentVeryLightPink: #ffcfef;
 
-  --accentStrongPurple: #ad99ff;
+  --accentStrongPurple: #7350ff;
+  --accentFadedPurple: #ad99ff;
   --accentStrongGreen: #adff99;
+
+  --accentLightPink: #e969ff;
+  --accentVeryLightPink: #f09dff;
+
+  --transparentBG: #0000001f;
+  --transparentBGhover: #00000036;
 }
 
 main {
@@ -50,8 +57,15 @@ main {
 
 body {
   font-family: sans-serif;
-  background-color: var(--darkTheme03);
+  background-color: #0e0e0e;
   color: var(--primaryColor);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 button,
@@ -74,13 +88,14 @@ ul {
 
 a {
   font-weight: 700;
-  color: var(--accentMidPurple);
+  color: var(--accentFadedPurple);
   text-underline-offset: 5px;
   font-family: 'Azeret Mono';
-  transition: color 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  filter: drop-shadow(0px 0px 5px #00000080);
 
   &:hover {
-    color: var(--accentMidPink);
+    color: var(--accentLightPink);
   }
 }
 
@@ -94,6 +109,7 @@ main a {
 p {
   color: var(--accentLightPurple);
   font-family: 'Azeret Mono';
+  line-height: 1.5;
 }
 
 /* Embedded Figma Content */
@@ -138,8 +154,8 @@ p {
 
   & img {
     transition: all 400ms ease-in-out;
-    /*height: fit-content; */
     margin: auto;
+    filter: drop-shadow(2px 4px 6px #00000020) contrast(1.2);
   }
 
   & .tech-p {
@@ -153,12 +169,19 @@ p {
     transform: translateY(50px);
   }
 }
+
+#projects-container {
+  position: relative;
+  z-index: 2;
+}
+
 #project-cards-container {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
   margin: 7rem 0 0;
+  padding: 0 3rem;
 }
 
 /* Project List */
@@ -166,12 +189,33 @@ main:has(#projects-container) {
   min-height: 50vh;
 }
 
+#root:has(#landing-page) {
+  overflow: hidden;
+}
+
 header {
+  position: relative;
+  z-index: 2;
   padding: 2rem 0 0;
   text-align: center;
 
   & #logo img {
     width: 80px;
+  }
+}
+
+.CTA-button {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  margin: 1rem auto 4rem;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  font-family: 'Azeret Mono';
+  border: 1px solid white;
+  color: var(--accentLightPurple);
+  border-radius: 500px;
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -182,22 +226,18 @@ header {
   color: var(--darkTheme08);
   overflow: hidden;
   max-height: 300px;
-  background-color: var(--darkTheme02);
   max-width: min-content;
-  transition: filter 200ms ease-in-out;
-  background-color: var(--darkTheme02);
+  background-color: var(--transparentBG);
   border: none;
   text-align: start;
-
+  border-radius: 5px;
   &:hover {
     cursor: pointer;
+    background-color: var(--transparentBGhover);
   }
 
   &:hover .card-details h2 {
-    color: var(--accentMidPurple);
-  }
-  &:hover {
-    filter: drop-shadow(4px 2px 20px var(--accentDarkPink));
+    color: var(--accentLightPink);
   }
 
   & img {
@@ -222,6 +262,7 @@ main:has(#landing-page) {
 }
 
 #landing-page {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -266,7 +307,7 @@ main:has(#landing-page) {
 
     & p {
       margin: 0 5px 0 0;
-      color: var(--accentMidPurple);
+      color: var(--accentFadedPurple);
     }
 
     & ul {
@@ -290,10 +331,8 @@ header nav {
   }
 
   & a {
-    transition: left 300ms ease-out;
-
     &.active {
-      color: var(--accentMidPink);
+      color: var(--accentLightPink);
 
       /* &::after {
         content: '';
@@ -325,6 +364,9 @@ main:has(#project-container) {
   justify-content: start;
 }
 #project-container {
+  position: relative;
+  margin-bottom: 5rem;
+  z-index: 2;
   padding: 2rem;
   max-width: 1000px;
   width: 100%;
@@ -356,6 +398,7 @@ main:has(#project-container) {
   }
 
   & .project-details {
+    color: white;
     & p {
       line-height: 1.6;
       font-size: 0.9rem;
@@ -375,7 +418,7 @@ main:has(#project-container) {
         padding: 3px 5px;
         text-transform: uppercase;
         font-size: 0.8rem;
-        background-color: var(--accentMidNavy);
+        background-color: #0c10206e;
         border-radius: 2px;
       }
     }
@@ -386,12 +429,13 @@ main:has(#project-container) {
     display: flex;
     justify-content: space-between;
     margin: 0 0 2rem;
+    filter: drop-shadow(2px 5px 5px #00000050);
 
     & button {
       background-color: transparent;
       border: none;
       text-decoration: underline;
-      color: var(--accentMidPurple);
+      color: var(--accentFadedPurple);
       font-family: 'Azeret Mono';
       font-size: 0.8rem;
       display: flex;
@@ -401,7 +445,7 @@ main:has(#project-container) {
       transition: color 200ms ease-in-out;
 
       &:hover {
-        color: var(--accentMidPink);
+        color: var(--accentStrongPurple);
         cursor: pointer;
       }
     }
@@ -431,6 +475,7 @@ main:has(#project-container) {
 
 /* About Styling */
 #about {
+  z-index: 2;
   max-width: 800px;
   margin: 4rem 0;
 
@@ -443,14 +488,14 @@ main:has(#project-container) {
     font-size: clamp(1.8rem, 5vw, 3rem);
     max-width: 800px;
     margin: 4rem 0;
-    color: var(--accentStrongPurple);
+    color: var(--accentVeryLightPink);
     text-align: center;
     margin: 0 auto;
     width: clamp(150px, 80vw, 615px);
   }
 
   & img {
-    filter: drop-shadow(5px 5px 4px var(--darkTheme02));
+    filter: drop-shadow(5px 5px 4px #00000060);
   }
 
   & #intro {
@@ -464,6 +509,7 @@ main:has(#project-container) {
         clamp(5px, 3vw, 2rem) clamp(0px, 4vw, 2rem);
       /*padding: 2rem 3rem 2rem 2rem;*/
       font-size: 1.2rem;
+      line-height: 1.5;
       font-weight: normal;
       text-align: center;
       font-size: clamp(0.8rem, 3vw, 1.2rem);
@@ -486,12 +532,14 @@ main:has(#project-container) {
       scale: 1;
       width: clamp(70px, 20vw, 280px);
       border-radius: 3px;
+      transform-origin: top left;
     }
 
     & #old_drawing {
       max-width: 540px;
       grid-row: 2 / span 2;
       grid-column: 1;
+      transform-origin: top center;
     }
 
     & .intro-details {
@@ -524,21 +572,6 @@ main:has(#project-container) {
       margin: 2rem auto;
       width: 420px;
     }
-
-    & button {
-      font-size: clamp(1.2rem, 2vw, 1.4rem);
-      transition: background-color 200ms;
-      margin: 1rem auto 4rem;
-      background-color: var(--accentMidNavy);
-      padding: 1rem 2rem;
-      font-family: 'Azeret Mono';
-      border: none;
-      color: var(--accentLightPurple);
-      &:hover {
-        cursor: pointer;
-        background-color: #212a4d;
-      }
-    }
   }
 
   #about-me-container {
@@ -553,10 +586,11 @@ main:has(#project-container) {
       top: -7rem;
       left: 6rem;
       z-index: 2;
+      transform-origin: top right;
     }
 
     & #a-little-bit-about-me-container {
-      background-color: var(--darkTheme02);
+      background-color: var(--transparentBG);
       padding: clamp(10px, 10vw, 2rem) clamp(10px, 10vw, 3rem);
       position: relative;
       width: clamp(200px, 80vw, 450px);
@@ -593,9 +627,10 @@ main:has(#project-container) {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   position: relative;
+  z-index: 2;
 
   & h2 {
-    color: var(--accentStrongPurple);
+    color: var(--accentFadedPurple);
     text-transform: capitalize;
   }
 
@@ -628,11 +663,12 @@ main:has(#contact-container) {
   min-height: 40vh;
 }
 #contact-container {
+  z-index: 2;
   margin: auto;
   text-align: center;
 
   & h1 {
-    color: var(--accentStrongPurple);
+    color: var(--accentFadedPurple);
     margin: 0 0 1rem;
     font-size: clamp(1rem, 4.5vw, 2rem);
   }
@@ -644,21 +680,10 @@ main:has(#contact-container) {
     justify-content: center;
 
     & button {
-      transition: background-color 200ms;
+      margin: initial;
       display: flex;
-      gap: 1rem;
       align-items: center;
-      background-color: var(--accentMidNavy);
-      border: none;
-      padding: 1rem 2rem;
-      color: var(--accentLightPurple);
-      font-family: 'Azeret Mono';
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-
-      &:hover {
-        cursor: pointer;
-        background-color: #212a4d;
-      }
+      gap: 1rem;
     }
   }
 
@@ -806,4 +831,36 @@ main:has(#error-container) {
       }
     }
   }
+}
+
+/*
+Noise
+*/
+.noise {
+  /* ... */
+  background: linear-gradient(20deg, #17032fc9, #6a20cb26),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: contrast(180%) brightness(60%);
+  height: 100%;
+}
+.overlay {
+  /* ... */
+  background: moccasin;
+  mix-blend-mode: multiply;
+}
+
+.isolate {
+  isolation: isolate;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 101%;
+}
+
+.aurora-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }

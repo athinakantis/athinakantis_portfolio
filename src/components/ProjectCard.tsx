@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Project as ProjectT } from '../types/types';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { motion } from 'motion/react';
 
 type ProjectCardProps = {
   project: ProjectT;
@@ -12,7 +13,9 @@ export const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
 
 
   return (
-    <button
+    <motion.button
+      transition={{ type: 'spring', bounce: 0.5 }}
+      whileHover={{ scale: 1.05, margin: '0 1rem' }}
       className='project-card-container'
       onClick={() => handleClick(project.id)}
     >
@@ -28,6 +31,6 @@ export const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
           <h2>{cardPreview.description}</h2>
         </div>
       </div>
-    </button>
+    </motion.button>
   );
 };

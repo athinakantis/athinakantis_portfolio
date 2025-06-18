@@ -10,10 +10,14 @@ export const Contact = () => {
       <h1>Our next project starts here!</h1>
       <div id="contact-actions-container">
 
-        <button onClick={() =>
-          window.open('mailto:athina.kantis@gmail.com')}>Send me an email
+        <motion.button
+          transition={{ type: "spring", bounce: 0.5 }}
+          whileHover={{ scale: 1.05 }}
+          className='CTA-button'
+          onClick={() =>
+            window.open('mailto:athina.kantis@gmail.com')}>Send me an email
           <Mail />
-        </button>
+        </motion.button>
       </div>
       <div id="socials">
         <ul>
