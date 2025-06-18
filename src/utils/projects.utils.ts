@@ -1,6 +1,6 @@
 import { Project } from '../types/types';
 
-function preloadImage(src: string): Promise<string> {
+export function preloadImage(src: string): Promise<string> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = src;

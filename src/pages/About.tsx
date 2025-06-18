@@ -1,9 +1,8 @@
 import { motion } from 'motion/react'
-import portrait from '../assets/about/IMG_7939.jpeg';
-import toddlerPortrait from '../assets/about/portrait_athina.jpg';
-import drawing from '../assets/about/old_drawing_700w.png'
+import { useContent } from '../hooks/useContent';
 
 export const About = () => {
+    const { content } = useContent()
     return (
         <section
             id='about'
@@ -18,23 +17,21 @@ export const About = () => {
                         Business College Helsinki
                     </h2>
                     <motion.img
-                        initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ type: "spring", bounce: 0.5 }}
                         whileHover={{ transform: 'rotate(5deg)' }}
                         id='portrait'
-                        src={portrait}
+                        src={content?.about[0].src}
                         alt=''
                     />
                     <motion.img
-                        initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ type: "spring", bounce: 0.5 }}
                         whileHover={{ transform: 'rotate(-3deg)' }}
                         width={700}
                         height={478}
                         id='old_drawing'
-                        src={drawing}
+                        src={content?.about[1].src}
                         alt='Drawn illustration made by a young Athina portraying a girl by a house on a cloudy day'
                     />
                     <p>
@@ -71,7 +68,7 @@ export const About = () => {
                             transition={{ type: "spring", bounce: 0.5 }}
                             whileHover={{ scale: 1.05, transform: 'rotate(-5deg)' }}
                             id='mini-me'
-                            src={toddlerPortrait}
+                            src={content?.about[2].src}
                             alt=''
                         />
                         <div id='a-little-bit-about-me-container'>

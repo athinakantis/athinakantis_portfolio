@@ -1,9 +1,8 @@
 import { ProjectCard } from '../components/ProjectCard'
-import { techStack } from '../utils/data'
 import { motion } from 'motion/react'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
-import { projectsData as projects } from '../utils/projects.data';
+import { projectsData as projects, techStack } from '../utils/projects.data';
 import { useEffect, useState } from 'react';
 import { Spinner } from '../components/Spinner';
 import { Project } from '../components/Project';

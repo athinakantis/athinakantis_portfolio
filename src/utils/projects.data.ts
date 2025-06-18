@@ -1,12 +1,29 @@
-import pancakePreview from '../assets/projects/pancakeCo_preview.png'
-import countdownPreview from '../assets/projects/countdown_preview.png'
-import MSFPreview from '../assets/projects/msf_preview.png'
+import birthdayPreview from '../assets/projects/birthday_countdown.mp4';
+import countdownPreview from '../assets/projects/countdown_preview.png';
 import countriesPreview from '../assets/projects/countries_preview.png';
-import illusiaPreview from '../assets/projects/illusia_preview.png'
+import illusiaPreview from '../assets/projects/illusia_preview.png';
+import MSFPreview from '../assets/projects/msf_preview.png';
+import pancakePreview from '../assets/projects/pancakeCo_preview.png';
 import { Project } from '../types/types';
-import birthdayPreview from '../assets/projects/birthday_countdown.mp4'
 
-let previewPath = 'https://athinakantis.github.io/portfolio_assets/previews/'
+import awsSvg from '../assets/tech_stack/aws.svg';
+import cssSvg from '../assets/tech_stack/css.svg';
+import dockerSvg from '../assets/tech_stack/docker.svg';
+import figmaSvg from '../assets/tech_stack/figma.svg';
+import gitSvg from '../assets/tech_stack/git.svg';
+import htmlSvg from '../assets/tech_stack/html.svg';
+import adobeAISvg from '../assets/tech_stack/illustrator.svg';
+import jsSvg from '../assets/tech_stack/javascript.svg';
+import jenkinsSvg from '../assets/tech_stack/jenkins.svg';
+import mySQLSvg from '../assets/tech_stack/mysql.svg';
+import nodeSvg from '../assets/tech_stack/nodejs.svg';
+import psSvg from '../assets/tech_stack/photoshop.svg';
+import postmanSvg from '../assets/tech_stack/postman.svg';
+import reactSvg from '../assets/tech_stack/react.svg';
+import tsSvg from '../assets/tech_stack/typescript.svg';
+import viteSvg from '../assets/tech_stack/vite.svg';
+
+const previewPath = 'https://athinakantis.github.io/portfolio_assets/previews/'
 
 export const projectsData: Project[] = [
   {
@@ -153,3 +170,26 @@ export const projectsData: Project[] = [
       'https://github.com/athinakantis/Front_End_Mentor/tree/main/multiStepForm',
   },
 ];
+
+/**
+ * Tech stack data
+ */
+export const techStack = [
+  { label: 'React', svg: reactSvg },
+  { label: 'TypeScript', svg: tsSvg },
+  { label: 'NodeJS', svg: nodeSvg },
+  { label: 'Docker', svg: dockerSvg },
+  { label: 'Git', svg: gitSvg },
+  { label: 'Jenkins', svg: jenkinsSvg },
+  { label: 'HTML', svg: htmlSvg },
+  { label: 'CSS', svg: cssSvg },
+  { label: 'JavaScript', svg: jsSvg },
+  { label: 'Vite', svg: viteSvg },
+  { label: 'MySQL', svg: mySQLSvg },
+  { label: 'AWS', svg: awsSvg },
+  { label: 'Figma', svg: figmaSvg },
+  { label: 'Illustrator', svg: adobeAISvg },
+  { label: 'Photoshop', svg: psSvg },
+  { label: 'Postman', svg: postmanSvg },
+];
+

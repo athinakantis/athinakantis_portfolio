@@ -1,5 +1,5 @@
 import { GalleryCategory } from '../components/GalleryCategory';
-import { art } from '../utils/data';
+import { art } from '../utils/gallery.data';
 
 export type ArtCategories = 'portraits' | 'landscapes' | 'illustrations';
 
