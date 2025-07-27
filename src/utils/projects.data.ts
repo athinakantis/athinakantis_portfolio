@@ -40,6 +40,8 @@ export const projectsData: Project[] = [
       'NestJS',
       'Responsive',
       'MUI',
+      'Auth',
+      'MFA'
     ],
     preview: {
       type: 'img',

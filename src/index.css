@@ -445,7 +445,7 @@ main:has(#project-container) {
       transition: color 200ms ease-in-out;
 
       &:hover {
-        color: var(--accentStrongPurple);
+        color: var(--accentVeryLightPink);
         cursor: pointer;
       }
     }
